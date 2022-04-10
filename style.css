@@ -1,26 +1,179 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #eef9bf;
 }
 
-.contents{
+.title{
+  height: 100px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card {
-    width: 120px;
-    height: 160px;
-    background-color: #a7e9af;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: transform 1s ease-out;
-  }
 
-  .flipped {
-    transform: rotate3d(0, 1, 0, 180deg);
-  }
-  img {
-    width: 100px;
-    height: 140px;
-  }
+h1{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+  color: #75B79E;
+  text-align: center;
+}
+
+.timer{
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.superior{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.inferior{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.noContents{
+  display: none;
+}
+
+.main{
+  width: 100%;
+  height: 100%;
+}
+
+.main > :nth-child(1){
+  position: absolute;
+  top: 15%;
+  left: 15px;
+}
+
+.main > :nth-child(2){
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.main > :nth-child(3){
+  position: absolute;
+  top: 40%;
+  left: 70%;
+}
+
+.main > :nth-child(4){
+  position: absolute;
+  top: 20%;
+  left: 47%;
+}
+
+.main > :nth-child(5){
+  position: absolute;
+  top: 70%;
+  right: 15px;
+}
+
+.main > :nth-child(6){
+  position: absolute;
+  top: 15%;
+  right: 15px;
+}
+
+.main > :nth-child(7){
+  position: absolute;
+  top: 70%;
+  left: 15px;
+}
+
+
+button{
+  width: 120px;
+  height: 60px;
+  border: solid 1px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  color: #75B79E;
+  background-color: #a7e9af;
+  font-size: 30px;
+}
+
+.card {
+  width: 120px;
+  height: 160px;
+  margin: 60px 20px;
+  background-color: #a7e9af;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 1s ease-out;
+}
+
+.flipped {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+img {
+  width: 100px;
+  height: 140px;
+}
+
+@media (max-width: 600px){
+
+h1{
+  font-size: 36px;
+}
+
+.main > :nth-child(1){
+  display: none;
+}
+
+.main > :nth-child(2){
+  left: 38%;
+  top: 56%;
+}
+
+.main > :nth-child(3){
+  display: none;
+}
+
+.main > :nth-child(4){
+  left: 38%;
+  top: 25%; 
+}
+
+.main > :nth-child(5){
+  display: none;
+}
+
+.main > :nth-child(6){
+  display: none;
+}
+
+.main > :nth-child(7){
+  display: none;
+}
+
+button{
+  left: 34%;
+  top: 45%;
+}
+
+.card{
+  margin: 60px 120px;
+}
+
+.timer{
+  top: 70px;
+}
+}
