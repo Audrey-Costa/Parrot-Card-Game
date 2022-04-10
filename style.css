@@ -1,0 +1,26 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.contents{
+  display: flex;
+}
+.card {
+    width: 120px;
+    height: 160px;
+    background-color: #a7e9af;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 1s ease-out;
+  }
+
+  .flipped {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  img {
+    width: 100px;
+    height: 140px;
+  }
