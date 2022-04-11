@@ -160,15 +160,20 @@ function compares(){
         winCount++;
     }
     if (winCount === gifArray.length/2){
-        alert(`Você venceu em ${moves} jogadas! \nSeu tempo foi de ${timeFinal}`)
-        let newGame = prompt("Você quer jogar uma nova partida?  (sim/não)")
-        if (newGame === "sim"){
-            nextPage();
-            play();
-        } else if (newGame === "não"){
-            nextPage();
-        }
+        alert(`Você venceu em ${moves} jogadas! \nSeu tempo foi: ${timeFinal}!`)
+        resetGame();
+    }
+}
 
+function resetGame(){
+    let newGame = prompt("Você quer jogar uma nova partida?  (sim/não)")
+    if (newGame === "sim"){
+        nextPage();
+        play();
+    } else if (newGame === "não"){
+        nextPage();
+    }else{
+        resetGame()
     }
 }
 
