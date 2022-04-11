@@ -21,34 +21,59 @@ h1{
   text-align: center;
 }
 
+h2{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+  color: #75B79E;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
 .timer{
   width: 120px;
   height: 50px;
   background-color:#a7e9af;
   border-radius: 50px;
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 80px;
   right: 10px;
   font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: aliceblue;
+  cursor: default;
 }
 
-.restart{
+.block{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.quit{
   width: 240px;
   height: 50px;
   background-color:#a7e9af;
   border-radius: 50px;
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 80px;
   left: 10px;
-  font-size: 35px;
+  font-size: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: aliceblue;
+  cursor: pointer;
 }
 
 .superior{
@@ -149,52 +174,74 @@ img {
   height: 140px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
 
-h1{
-  font-size: 36px;
-}
+  h1{
+    font-size: 36px;
+  }
 
-.main > :nth-child(1){
-  display: none;
-}
+  .superior, .inferior{
+    display: flex;
+    justify-content: center;
+  }
 
-.main > :nth-child(2){
-  left: 38%;
-  top: 56%;
-}
+  .main > :nth-child(1){
+    display: none;
+  }
 
-.main > :nth-child(3){
-  display: none;
-}
+  .main > :nth-child(2){
+    left: 40%;
+    top: 56%;
+  }
 
-.main > :nth-child(4){
-  left: 38%;
-  top: 25%; 
-}
+  .main > :nth-child(3){
+    display: none;
+  }
 
-.main > :nth-child(5){
-  display: none;
-}
+  .main > :nth-child(4){
+    left: 40%;
+    top: 25%; 
+  }
 
-.main > :nth-child(6){
-  display: none;
-}
+  .main > :nth-child(5){
+    display: none;
+  }
 
-.main > :nth-child(7){
-  display: none;
-}
+  .main > :nth-child(6){
+    display: none;
+  }
 
-button{
-  left: 34%;
-  top: 45%;
-}
+  .main > :nth-child(7){
+    display: none;
+  }
 
-.card{
-  margin: 60px 120px;
-}
+  button{
+    left: 40%;
+    top: 45%;
+  }
 
-.timer{
-  top: 70px;
-}
+  .card{
+    margin: 60px 120px;
+  }
+
+  .timer{
+    top: 38%;
+    width: 60px;
+    height: 200px;
+    font-size: 26px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: fixed;
+  }
+
+  .quit{
+    top: 30%;
+    width: 60px;
+    height: 320px;
+    font-size: 26px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: fixed;
+  }
 }
