@@ -25,11 +25,11 @@ function play(){
         for (let i = 0; i < gifArray.length; i++){
             if (i < cards/2){
                 document.querySelector(".superior").innerHTML += `            <div class="card class${i}" onclick="flip(this)" card="${i}">
-                <img src="Images/front.png" />
+                <img src="./Images/front.png" />
               </div>`;
             }else if (i < cards){
                 document.querySelector(".inferior").innerHTML += `            <div class="card class${i}" onclick="flip(this)" card="${i}">
-                <img src="Images/front.png" />
+                <img src="./Images/front.png" />
               </div>`;
             }
         }
@@ -113,7 +113,7 @@ function flip(card) {
 
 //Substitui a fonte da imagem da carta e atribui o elemento alterado ao card1 e card2, para então chamar a função compares.
 function cardBack(element) {
-    imgAttribute.setAttribute("src", `/Images/${gifArray[element.getAttribute("card")]}`);
+    imgAttribute.setAttribute("src", `./Images/${gifArray[element.getAttribute("card")]}`);
     if (cardsClicked === 1){
         document.querySelector(".block").classList.remove("noContents")
         setTimeout(function(){unlock()}, 500);
@@ -132,8 +132,8 @@ function unlock(){
 
 //Devolve a fonte da frente da imagem da carta.
 function cardFront(element1, element2) {
-    element1.setAttribute("src", "/Images/front.png");
-    element2.setAttribute("src", "/Images/front.png");
+    element1.setAttribute("src", "./Images/front.png");
+    element2.setAttribute("src", "./Images/front.png");
 }
 
 function classClearSelect(){
